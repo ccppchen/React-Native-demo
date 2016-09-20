@@ -1,0 +1,89 @@
+{
+  "parser": "babel-eslint",
+
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "commonjs": true,
+    "jasmine": true
+  },
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        // lambda表达式
+        "arrowFunctions": true,
+        // 解构赋值
+        "destructuring": true,
+        // class
+        "classes": true,
+        // http://es6.ruanyifeng.com/#docs/function#函数参数的默认值
+        "defaultParams": true,
+        // 块级作用域，允许使用let const
+        "blockBindings": true,
+        // 允许使用模块，模块内默认严格模式
+        "modules": true,
+        // 允许字面量定义对象时，用表达式做属性名
+        // http://es6.ruanyifeng.com/#docs/object#属性名表达式
+        "objectLiteralComputedProperties": true,
+        // 允许对象字面量方法名简写
+        "objectLiteralShorthandMethods": true,
+        "objectLiteralShorthandProperties": true,
+        // http://es6.ruanyifeng.com/#docs/function#rest参数
+        "restParams": true,
+        // http://es6.ruanyifeng.com/#docs/function#扩展运算符
+        "spread": true,
+        // http://es6.ruanyifeng.com/#docs/iterator#for---of循环
+        "forOf": true,
+        // http://es6.ruanyifeng.com/#docs/generator
+        "generators": true,
+        // http://es6.ruanyifeng.com/#docs/string#模板字符串
+        "templateStrings": true,
+        "superInFunctions": true,
+        // http://es6.ruanyifeng.com/#docs/object#对象的扩展运算符
+        "experimentalObjectRestSpread": true
+      }
+  },
+  "rules": {
+    "no-undef" : 0,
+    "no-console": 0,
+    "no-alert": 0,
+    "react/jsx-no-undef": 1,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/jsx-filename-extension": 1,
+    "jsx-quotes": 0,
+    "no-dupe-args": 2,
+    "comma-dangle": [2, "always-multiline"],
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-empty": 2,
+    "no-extra-parens": 2,
+    "no-extra-semi": 2,
+    "no-func-assign": 2,
+    "no-sparse-arrays": 2,
+    "no-unexpected-multiline": 2,
+    "no-unreachable": 0
+  },
+  "plugins": [
+    "react",
+    "eslint-plugin-react"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src", "image"]
+    }
+  },
+  "globals": {
+    "__DEV__": true,
+    "__dirname": false,
+    "require": true,
+    "class": true
+  }
+}
